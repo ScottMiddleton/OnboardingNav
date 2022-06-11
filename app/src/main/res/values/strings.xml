@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Onboarding Navigation</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="welcome_fragment_label">Welcome</string>
+    <string name="terms_fragment_label">Terms of Service</string>
+    <string name="credentials_fragment_label">Credentials</string>
+    <string name="personal_info_fragment_label">Personal Info</string>
+    <string name="new_pin_fragment_label">New Pin</string>
+    <string name="confirm_pin_fragment_label">Confirm Pin</string>
+    <string name="home_fragment_label">Home</string>
+    <string name="next">Next</string>
+    <string name="welcome_screen_body">Simplest possible first screen welcoming user, with ability to proceed to next screen.</string>
+    <string name="terms_checkbox_i_agree">I agree</string>
+    <string name="terms_body">Lorem ipsum dolor sit amet. In ratione alias aut mollitia harum id incidunt fugiat id dolore corporis qui voluptas molestiae aut esse laboriosam aut iste minus! Sit corrupti minima non facilis animi aut illo deleniti sit illo dolores quo dolores saepe qui autem doloribus aut minima quam. Et amet soluta hic quidem itaque sit impedit iusto. Qui nostrum dolor eos quibusdam velit aut quia quia a galisum unde eum officia quia ut voluptatibus sequi est nisi dolor. \n\n Ut consectetur recusandae et sequi voluptatem ut corporis autem hic odio rerum sed dolores harum ad animi repellendus id libero similique. Et fuga expedita ea error aspernatur qui dolorum impedit sit rerum dignissimos aut sint velit. Non omnis earum et repellendus nihil 33 placeat odio. Qui obcaecati iusto quo rerum inventore rem officia obcaecati. Id molestiae consequatur et nulla laborum vel omnis voluptatem a excepturi tenetur id facilis explicabo! Aut architecto voluptatum et quas odio sed saepe neque aut debitis animi et culpa eveniet quo numquam ipsa quo facilis temporibus.\n\n Lorem ipsum dolor sit amet. In ratione alias aut mollitia harum id incidunt fugiat id dolore corporis qui voluptas molestiae aut esse laboriosam aut iste minus! Sit corrupti minima non facilis animi aut illo deleniti sit illo dolores quo dolores saepe qui autem doloribus aut minima quam. Et amet soluta hic quidem itaque sit impedit iusto. Qui nostrum dolor eos quibusdam velit aut quia quia a galisum unde eum officia quia ut voluptatibus sequi est nisi dolor. Ut consectetur recusandae et sequi voluptatem ut corporis autem hic odio rerum sed dolores harum ad animi repellendus id libero similique. Et fuga expedita ea error aspernatur qui dolorum impedit sit rerum dignissimos aut sint velit. Non omnis earum et repellendus nihil 33 placeat odio. Qui obcaecati iusto quo rerum inventore rem officia obcaecati. Id molestiae consequatur et nulla laborum vel omnis voluptatem a excepturi tenetur id facilis explicabo! Aut architecto voluptatum et quas odio sed saepe neque aut debitis animi et culpa eveniet quo numquam ipsa quo facilis temporibus.</string>
+</resources>
