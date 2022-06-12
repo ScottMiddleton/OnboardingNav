@@ -26,3 +26,10 @@ The architecture setup for this project has been built with the intention that t
 Should we want to add many more features a multi-module setup could be considered. 
 
 I have utilised the Navigation Component library to handle navigation and animations. I also have included unit tests for the onboarding use cases.
+
+## Bonus
+Of the bonus items I have implemented the following
+• Animated transitions between screens
+• Tests of the code
+• Viewing of telephone, email and name when login
+• Have better UI than most ugly possible
