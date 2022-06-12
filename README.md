@@ -15,6 +15,7 @@ dependencies as you like.
 • Upon app start app need to check if user is “signed in”, if she is the Main
 screen is showed with the users first name and last name. Otherwise user
 should go through the onboarding flow.
+
 • User must be able to go back to previous screens in onboarding, i.e. from
 Personal Info, go back to Credentials and change the email.
 
