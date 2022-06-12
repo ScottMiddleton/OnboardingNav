@@ -1,4 +1,4 @@
-package com.example.onboardingnav.feature_onboarding.presentation
+package com.example.onboardingnav.feature_onboarding.presentation.welcome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.onboardingnav.R
-import com.example.onboardingnav.databinding.FragmentConfirmPinBinding
-import com.example.onboardingnav.databinding.FragmentCredentialsBinding
+import com.example.onboardingnav.databinding.FragmentWelcomeBinding
 
-class ConfirmPinFragment : Fragment() {
+class WelcomeFragment : Fragment() {
 
-    private var _binding: FragmentConfirmPinBinding? = null
+    private var _binding: FragmentWelcomeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,7 +19,7 @@ class ConfirmPinFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentConfirmPinBinding.inflate(inflater, container, false)
+        _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -29,7 +28,7 @@ class ConfirmPinFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.nextBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_confirmPinFragment_to_homeFragment)
+            findNavController().navigate(R.id.action_welcomeFragment_to_termsFragment)
         }
     }
 

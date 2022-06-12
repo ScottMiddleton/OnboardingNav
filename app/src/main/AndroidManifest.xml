@@ -3,6 +3,7 @@
     package="com.example.onboardingnav">
 
     <application
+        android:name="com.example.OnboardingApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,9 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnboardingNav">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.OnboardingNav.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

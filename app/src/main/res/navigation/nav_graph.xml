@@ -2,70 +2,84 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/welcomeFragment">
+    android:id="@+id/nav_graph">
 
-    <fragment
-        android:id="@+id/welcomeFragment"
-        android:name="com.example.onboardingnav.feature_onboarding.presentation.WelcomeFragment"
-        android:label="@string/welcome_fragment_label"
-        tools:layout="@layout/fragment_welcome">
-        <action
-            android:id="@+id/action_welcomeFragment_to_termsFragment"
-            app:destination="@id/termsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/termsFragment"
-        android:name="com.example.onboardingnav.feature_onboarding.presentation.TermsOfServiceFragment"
-        android:label="@string/terms_fragment_label"
-        tools:layout="@layout/fragment_terms">
-        <action
-            android:id="@+id/action_termsFragment_to_credentialsFragment"
-            app:destination="@id/credentialsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/credentialsFragment"
-        android:name="com.example.onboardingnav.feature_onboarding.presentation.CredentialsFragment"
-        android:label="@string/credentials_fragment_label"
-        tools:layout="@layout/fragment_credentials" >
-        <action
-            android:id="@+id/action_credentialsFragment_to_personalInfoFragment"
-            app:destination="@id/personalInfoFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/personalInfoFragment"
-        android:name="com.example.onboardingnav.feature_onboarding.presentation.PersonalInfoFragment"
-        android:label="@string/personal_info_fragment_label"
-        tools:layout="@layout/fragment_personal_info" >
-        <action
-            android:id="@+id/action_personalInfoFragment_to_newPinFragment"
-            app:destination="@id/newPinFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/newPinFragment"
-        android:name="com.example.onboardingnav.feature_onboarding.presentation.NewPinFragment"
-        android:label="@string/new_pin_fragment_label"
-        tools:layout="@layout/fragment_new_pin" >
-        <action
-            android:id="@+id/action_newPinFragment_to_confirmPinFragment"
-            app:destination="@id/confirmPinFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/confirmPinFragment"
-        android:name="com.example.onboardingnav.feature_onboarding.presentation.ConfirmPinFragment"
-        android:label="@string/confirm_pin_fragment_label"
-        tools:layout="@layout/fragment_confirm_pin" >
-        <action
-            android:id="@+id/action_confirmPinFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.onboardingnav.feature_home.presentation.HomeFragment"
         android:label="@string/home_fragment_label"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            android:id="@+id/action_homeFragment_to_onboarding"
+            app:destination="@id/onboarding_graph"
+            app:popUpTo="@id/nav_graph"/>
     </fragment>
+    <navigation android:id="@+id/onboarding_graph"
+        app:startDestination="@id/welcomeFragment">
+        <fragment
+            android:id="@+id/welcomeFragment"
+            android:name="com.example.onboardingnav.feature_onboarding.presentation.welcome.WelcomeFragment"
+            android:label="@string/welcome_fragment_label"
+            tools:layout="@layout/fragment_welcome">
+            <action
+                android:id="@+id/action_welcomeFragment_to_termsFragment"
+                app:destination="@id/termsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/termsFragment"
+            android:name="com.example.onboardingnav.feature_onboarding.presentation.terms.TermsOfServiceFragment"
+            android:label="@string/terms_fragment_label"
+            tools:layout="@layout/fragment_terms">
+            <action
+                android:id="@+id/action_termsFragment_to_credentialsFragment"
+                app:destination="@id/credentialsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/credentialsFragment"
+            android:name="com.example.onboardingnav.feature_onboarding.presentation.credentials.CredentialsFragment"
+            android:label="@string/credentials_fragment_label"
+            tools:layout="@layout/fragment_credentials">
+            <action
+                android:id="@+id/action_credentialsFragment_to_personalInfoFragment"
+                app:destination="@id/personalInfoFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/personalInfoFragment"
+            android:name="com.example.onboardingnav.feature_onboarding.presentation.personal.PersonalInfoFragment"
+            android:label="@string/personal_info_fragment_label"
+            tools:layout="@layout/fragment_personal_info">
+            <action
+                android:id="@+id/action_personalInfoFragment_to_newPinFragment"
+                app:destination="@id/pin_graph" />
+        </fragment>
+        <navigation android:id="@+id/pin_graph"
+            app:startDestination="@id/newPinFragment">
+        <fragment
+            android:id="@+id/newPinFragment"
+            android:name="com.example.onboardingnav.feature_onboarding.presentation.pin.NewPinFragment"
+            android:label="@string/new_pin_fragment_label"
+            tools:layout="@layout/fragment_new_pin">
+            <action
+                android:id="@+id/action_newPinFragment_to_confirmPinFragment"
+                app:destination="@id/confirmPinFragment" >
+                <argument
+                    android:name="pin"
+                    app:argType="string" />
+            </action>
+        </fragment>
+        <fragment
+            android:id="@+id/confirmPinFragment"
+            android:name="com.example.onboardingnav.feature_onboarding.presentation.pin.ConfirmPinFragment"
+            android:label="@string/confirm_pin_fragment_label"
+            tools:layout="@layout/fragment_confirm_pin">
+            <action
+                android:id="@+id/action_confirmPinFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@id/nav_graph" />
+            <argument
+                android:name="pin"
+                app:argType="string" />
+        </fragment>
+        </navigation>
+    </navigation>
 </navigation>

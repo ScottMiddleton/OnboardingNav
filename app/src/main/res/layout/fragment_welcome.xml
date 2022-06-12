@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature_onboarding.presentation.WelcomeFragment">
+    tools:context=".feature_onboarding.presentation.welcome.WelcomeFragment">
 
     <TextView
         android:id="@+id/welcome_body_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textAlignment="center"
         android:text="@string/welcome_screen_body"
         android:padding="@dimen/spacing_large"
         app:layout_constraintBottom_toTopOf="@id/next_btn"
