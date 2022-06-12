@@ -29,7 +29,11 @@ I have utilised the Navigation Component library to handle navigation and animat
 
 ## Bonus
 Of the bonus items I have implemented the following
+
 • Animated transitions between screens
+
 • Tests of the code
+
 • Viewing of telephone, email and name when login
+
 • Have better UI than most ugly possible
