@@ -23,7 +23,11 @@
             tools:layout="@layout/fragment_welcome">
             <action
                 android:id="@+id/action_welcomeFragment_to_termsFragment"
-                app:destination="@id/termsFragment" />
+                app:destination="@id/termsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
         </fragment>
         <fragment
             android:id="@+id/termsFragment"
@@ -32,7 +36,11 @@
             tools:layout="@layout/fragment_terms">
             <action
                 android:id="@+id/action_termsFragment_to_credentialsFragment"
-                app:destination="@id/credentialsFragment" />
+                app:destination="@id/credentialsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
         </fragment>
         <fragment
             android:id="@+id/credentialsFragment"
@@ -41,7 +49,11 @@
             tools:layout="@layout/fragment_credentials">
             <action
                 android:id="@+id/action_credentialsFragment_to_personalInfoFragment"
-                app:destination="@id/personalInfoFragment" />
+                app:destination="@id/personalInfoFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
         </fragment>
         <fragment
             android:id="@+id/personalInfoFragment"
@@ -50,7 +62,11 @@
             tools:layout="@layout/fragment_personal_info">
             <action
                 android:id="@+id/action_personalInfoFragment_to_newPinFragment"
-                app:destination="@id/pin_graph" />
+                app:destination="@id/pin_graph"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
         </fragment>
         <navigation android:id="@+id/pin_graph"
             app:startDestination="@id/newPinFragment">
@@ -64,7 +80,11 @@
                 app:destination="@id/confirmPinFragment" >
                 <argument
                     android:name="pin"
-                    app:argType="string" />
+                    app:argType="string"
+                    app:enterAnim="@anim/slide_in_right"
+                    app:exitAnim="@anim/slide_out_left"
+                    app:popEnterAnim="@anim/slide_in_left"
+                    app:popExitAnim="@anim/slide_out_right"/>
             </action>
         </fragment>
         <fragment
@@ -75,6 +95,8 @@
             <action
                 android:id="@+id/action_confirmPinFragment_to_homeFragment"
                 app:destination="@id/homeFragment"
+                app:enterAnim="@android:anim/fade_in"
+                app:exitAnim="@android:anim/fade_out"
                 app:popUpTo="@id/nav_graph" />
             <argument
                 android:name="pin"

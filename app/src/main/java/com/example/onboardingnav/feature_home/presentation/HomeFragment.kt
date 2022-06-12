@@ -29,7 +29,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
-        binding.homeTv.text = getString(R.string.home_completed_onboarding, viewModel.username)
+        binding.homeTv.text = getString(R.string.home_completed_onboarding, viewModel.userFullName)
+        binding.emailTv.text = viewModel.userInfo.email
+        binding.phoneTv.text = viewModel.userInfo.phoneNo
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

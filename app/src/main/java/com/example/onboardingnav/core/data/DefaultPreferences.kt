@@ -1,7 +1,7 @@
 package com.example.onboardingnav.core.data
 
 import android.content.SharedPreferences
-import com.example.onboardingnav.feature_home.domain.model.UserName
+import com.example.onboardingnav.feature_home.domain.model.UserInfo
 import com.example.onboardingnav.core.domain.preferences.Preferences
 
 class DefaultPreferences(
@@ -33,7 +33,7 @@ class DefaultPreferences(
 
     override fun saveTelephoneNo(telephoneNo: String) {
         sharedPref.edit()
-            .putString(Preferences.KEY_SAVE_TELEPHONE_NO, telephoneNo)
+            .putString(Preferences.KEY_TELEPHONE_NO, telephoneNo)
             .apply()
     }
 
@@ -43,13 +43,17 @@ class DefaultPreferences(
             .apply()
     }
 
-    override fun loadUserName(): UserName {
+    override fun loadUserInfo(): UserInfo {
         val firstName = sharedPref.getString(Preferences.KEY_FIRST_NAME, null)
         val lastName = sharedPref.getString(Preferences.KEY_LAST_NAME, null)
+        val email = sharedPref.getString(Preferences.KEY_EMAIL, null)
+        val phone = sharedPref.getString(Preferences.KEY_TELEPHONE_NO, null)
 
-        return UserName(
+        return UserInfo(
             firstName = firstName ?: "",
-            lastName = lastName ?: ""
+            lastName = lastName ?: "",
+            email = email ?: "",
+            phoneNo = phone ?: ""
         )
     }
 

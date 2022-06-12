@@ -1,6 +1,5 @@
 package com.example.onboardingnav.feature_home.domain.di
 
-import com.example.onboardingnav.core.domain.preferences.Preferences
 import com.example.onboardingnav.feature_home.domain.use_cases.GetFullName
 import dagger.Module
 import dagger.Provides
@@ -14,7 +13,7 @@ object HomeDomainModule {
 
     @Provides
     @ViewModelScoped
-    fun provideGetFullNameUseCase(preferences: Preferences): GetFullName {
-        return GetFullName(preferences)
+    fun provideGetFullNameUseCase(): GetFullName {
+        return GetFullName()
     }
 }

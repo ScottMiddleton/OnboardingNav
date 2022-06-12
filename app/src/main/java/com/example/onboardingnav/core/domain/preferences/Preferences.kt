@@ -1,6 +1,6 @@
 package com.example.onboardingnav.core.domain.preferences
 
-import com.example.onboardingnav.feature_home.domain.model.UserName
+import com.example.onboardingnav.feature_home.domain.model.UserInfo
 
 interface Preferences {
     fun saveEmail(email: String)
@@ -11,7 +11,7 @@ interface Preferences {
     fun savePin(pin: String)
     fun clearAll()
 
-    fun loadUserName(): UserName
+    fun loadUserInfo(): UserInfo
 
     fun saveShouldShowOnboarding(shouldShow: Boolean)
     fun loadShouldShowOnboarding(): Boolean
@@ -21,7 +21,7 @@ interface Preferences {
         const val KEY_PASSWORD = "password"
         const val KEY_FIRST_NAME = "first_name"
         const val KEY_LAST_NAME = "last_name"
-        const val KEY_SAVE_TELEPHONE_NO = "telephone"
+        const val KEY_TELEPHONE_NO = "telephone"
         const val KEY_PIN = "pin"
         const val KEY_SHOULD_SHOW_ONBOARDING = "should_show_onboarding"
     }

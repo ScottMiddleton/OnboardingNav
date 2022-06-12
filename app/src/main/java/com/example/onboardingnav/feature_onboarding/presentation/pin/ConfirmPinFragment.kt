@@ -57,6 +57,7 @@ class ConfirmPinFragment : Fragment() {
                         is UiEvent.ShowSnackbar -> {
                             Snackbar.make(binding.root, it.message.asString(requireContext()), Snackbar.LENGTH_LONG).show()
                         }
+                        else -> {}
                     }
                 }
             }

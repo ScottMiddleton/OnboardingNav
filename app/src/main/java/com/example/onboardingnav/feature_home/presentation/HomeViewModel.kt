@@ -20,7 +20,8 @@ class HomeViewModel @Inject constructor(
     private val _uiEvent = Channel<UiEvent>()
     val uiEvent = _uiEvent.receiveAsFlow()
 
-    val username = getFullName()
+    val userInfo = preferences.loadUserInfo()
+    val userFullName = getFullName(userInfo.firstName, userInfo.lastName)
 
     fun onLogout() {
         preferences.clearAll()
